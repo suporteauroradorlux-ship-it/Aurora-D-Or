@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedido Confirmado | Aurora D'Or</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      margin: 0; padding: 0; height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Inter', sans-serif;
+      background: #FAFAFA; color: #050505; text-align: center;
+    }
+    .card {
+      background: white; padding: 60px; max-width: 500px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+      animation: up 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    h1 { font-family: 'Playfair Display', serif; margin: 20px 0; }
+    .check {
+      font-size: 4rem; color: #D4AF37; margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block; margin-top: 30px;
+      padding: 14px 30px; background: #000; color: #fff; text-decoration: none;
+      font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+    }
+    @keyframes up { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <i class="ph ph-check-circle check"></i>
+    <h1>Merci!</h1>
+    <p>Seu pedido na <strong>Aurora D'Or</strong> está sendo processado.</p>
+    <p style="color: #777; font-size: 0.9rem; margin-top: 10px;">Você será redirecionado para o pagamento seguro agora.</p>
+    
+    <a href="SEU_LINK_MERCADO_PAGO_AQUI" class="btn">Pagar com Mercado Pago</a>
+    
+    <div style="margin-top: 20px;">
+      <a href="index.html" style="color: #999; font-size: 0.8rem; text-decoration: none;">Voltar para a loja</a>
+    </div>
+  </div>
+  
+  <script>
+    // Limpa o carrinho após o sucesso
+    localStorage.removeItem('aurora_cart');
+    
+    // Opcional: Redirecionamento automático após 3 segundos
+    // setTimeout(() => { window.location.href = 'SEU_LINK_MERCADO_PAGO_AQUI'; }, 3000);
+  </script>
+</body>
+</html>
